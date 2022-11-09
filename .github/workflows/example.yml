@@ -1,6 +1,4 @@
-on:
-  workflow_dispath
-  
+on: workflow_dispatch
 name: workflow_example
 jobs:
   example_job:
