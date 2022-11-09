@@ -1,0 +1,11 @@
+on:
+  workflow_dispath
+  
+name: workflow_example
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+           git clone https://github.com/wmgeolab/salb-input-pipeline
+           python example.py
