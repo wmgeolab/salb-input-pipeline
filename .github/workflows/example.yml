@@ -7,4 +7,5 @@ jobs:
       - run: |
            git lfs clone https://github.com/wmgeolab/salb-input-pipeline
            cd salb-input-pipeline
-           python example.py
+           cd mentorshipWork
+           python WebScraper.py
