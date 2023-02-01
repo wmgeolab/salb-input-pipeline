@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-           pip install bs4
            git lfs clone https://github.com/wmgeolab/salb-input-pipeline
            cd salb-input-pipeline
            cd mentorshipWork
