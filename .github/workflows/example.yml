@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: |
            pip install beautifulsoup4
-           git lfs clone https://github.com/wmgeolab/salb-input-pipeline
+           git clone https://github.com/wmgeolab/salb-input-pipeline
            cd salb-input-pipeline
            cd mentorshipWork
            python WebScraper.py
