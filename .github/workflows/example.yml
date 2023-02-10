@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+           pip install beautifulsoup4
            git clone https://github.com/wmgeolab/salb-input-pipeline
            cd salb-input-pipeline
            cd mentorshipWork
