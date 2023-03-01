@@ -41,6 +41,7 @@ while page != 5:
 
       
       salb_data1 = salb_results1.find_all("tr")
+      print("TR Found")
       for salb_x in salb_data1:
         data =[]
         salb_name_element = salb_x.find("a")
@@ -52,11 +53,11 @@ while page != 5:
         salb_s = str(salb_set_elements)[25:29]
         salb_cc = str(salb_ref)[9:13]
         
-        
+        print("pre append")
         data.append(salb_n)
         data.append(salb_cc)
       
-        
+        print("request" + salb_ref)
         url_salb2 = f"https://salb.un.org{salb_ref}"
         salb_page2 = get_legacy_session().get(url_salb2)
 
