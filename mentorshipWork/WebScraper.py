@@ -6,6 +6,7 @@ import shutil
 import requests
 import urllib3
 import ssl
+import sys
 
 
 class CustomHttpAdapter (requests.adapters.HTTPAdapter):
@@ -42,6 +43,7 @@ while page != 5:
       
       salb_data1 = salb_results1.find_all("tr")
       print("TR Found")
+      sys.stderr.write("TR FOUND")
       for salb_x in salb_data1:
         data =[]
         salb_name_element = salb_x.find("a")
@@ -58,6 +60,7 @@ while page != 5:
         data.append(salb_cc)
       
         print("request" + salb_ref)
+        sys.stderr.write("req" + salb_ref)
         url_salb2 = f"https://salb.un.org{salb_ref}"
         salb_page2 = get_legacy_session().get(url_salb2)
 
