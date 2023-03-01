@@ -58,7 +58,7 @@ while page != 5:
       
         
         url_salb2 = f"https://salb.un.org{salb_ref}"
-        salb_page2 = requests.get(url_salb2)
+        salb_page2 = get_legacy_session().get(url_salb2)
 
         salb_soup2 = bs(salb_page2.content, "html.parser")
         salb_results2 = salb_soup2.find(id="block-un2-theme-content", class_="block block-system block-system-main-block")
@@ -86,7 +86,7 @@ while page != 5:
           for result in salb_geojson_list:
             salb_geojson = result['href']
             data.append(salb_geojson)
-            response = requests.get(salb_geojson)
+            response = get_legacy_session().get(salb_geojson)
             open(salb_n + ".geojson", "wb").write(response.content)
             
             current_loc = salb_n + ".geojson"
