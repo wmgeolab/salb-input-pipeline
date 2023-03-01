@@ -14,3 +14,6 @@ jobs:
            echo "-----"
            pwd
            python WebScraper.py
+           git add -A .
+           git commit -m "Automated web scrape"
+           git push
