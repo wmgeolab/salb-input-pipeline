@@ -12,4 +12,5 @@ jobs:
            cd salb-input-pipeline
            cd mentorshipWork
            echo "-----"
+           pwd
            python WebScraper.py
