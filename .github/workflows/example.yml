@@ -6,7 +6,10 @@ jobs:
     steps:
       - run: |
            pip install beautifulsoup4
+           echo "-----"
            git clone https://github.com/wmgeolab/salb-input-pipeline
+           echo "-----"
            cd salb-input-pipeline
            cd mentorshipWork
+           echo "-----"
            python WebScraper.py
