@@ -28,18 +28,13 @@ def get_legacy_session():
     session.mount('https://', CustomHttpAdapter(ctx))
     return session
 
-test = get_legacy_session().get("https://salb.un.org/en/data?title=&field_un_region_target_id=All&page=2")
-
-print(test)
-print(test.content)
-
 f = r"C:\Users\jkang\Documents\mentorshipWork\GeoJson.csv"
 rows = []
 page = 0
 while page != 5:
       url_salb1 = "https://salb.un.org/en/data?title=&field_un_region_target_id=All&page={page}"
 
-      salb_page1 = requests.get(url_salb1)
+      salb_page1 = get_legacy_session().get(url_salb1)
 
       salb_soup1 = bs(salb_page1.content, "html.parser")
       salb_results1 = salb_soup1.find(id="block-un2-theme-content")
