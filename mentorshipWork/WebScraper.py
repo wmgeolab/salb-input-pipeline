@@ -8,7 +8,7 @@ f = r"C:\Users\jkang\Documents\mentorshipWork\GeoJson.csv"
 rows = []
 page = 0
 while page != 5:
-      url_salb1 = f"https://salb.un.org/en/data?title=&field_un_region_target_id=All&page={page}"
+      url_salb1 = "https://salb.un.org/en/data?title=&field_un_region_target_id=All&page={page}"
 
       salb_page1 = requests.get(url_salb1)
 
