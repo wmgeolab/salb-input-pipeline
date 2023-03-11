@@ -15,6 +15,6 @@ jobs:
            pwd
            python WebScraper.py
            git add -A .
-           git commit -m "Automated web scrape"
+           git commit -m "Automated web scraper"
            git remote set-url origin https://x-access-token:${{ secrets.YOURTOKEN }}@github.com/wmgeolab/salb-input-pipeline
            git push
