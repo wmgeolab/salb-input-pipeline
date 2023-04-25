@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+           git config --global jkangster2 "@gmail.com"
            pip install beautifulsoup4
            echo "-----"
            git clone https://github.com/wmgeolab/salb-input-pipeline
