@@ -29,7 +29,7 @@ def get_legacy_session():
     session.mount('https://', CustomHttpAdapter(ctx))
     return session
 
-f = r"C:\Users\jkang\Documents\mentorshipWork\GeoJson.csv"
+f = r"/mentorshipWork/GeoJson.csv"
 rows = []
 page = 0
 while page != 5:
@@ -94,7 +94,7 @@ while page != 5:
             open(salb_n + ".geojson", "wb").write(response.content)
             
             current_loc = salb_n + ".geojson"
-            new_loc = r"C:\\Users\\jkang\Documents\\mentorshipWork\\Geojsons\\" + current_loc
+            new_loc = r"/mentorshipWork/Geojsons/" + current_loc
             shutil.move(current_loc, new_loc)
             a += 1
             
