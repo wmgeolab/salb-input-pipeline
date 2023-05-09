@@ -29,7 +29,7 @@ def get_legacy_session():
     session.mount('https://', CustomHttpAdapter(ctx))
     return session
 
-f = "mentorshipWork/GeoJson.csv"
+f = "salb-input-pipeline/mentorshipWork/GeoJson.csv"
 rows = []
 page = 0
 while page != 5:
