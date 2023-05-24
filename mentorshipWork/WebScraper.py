@@ -94,7 +94,7 @@ while page != 5:
             open(salb_n + ".geojson", "wb").write(response.content)
             
             current_loc = salb_n + ".geojson"
-            new_loc = "/Geojsons/" + current_loc
+            new_loc = "./Geojsons/" + current_loc
             shutil.move(current_loc, new_loc)
             a += 1
             
